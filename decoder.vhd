@@ -17,3 +17,18 @@ PORT (
 		data_out_valid : OUT Std_logic -- la donnée sur le port de sortie est valide
 );
 END decoder;
+
+architecture decoder_a of decoder is
+
+begin
+
+process(code_op,flagEQ,flagGT) is
+
+begin
+
+
+
+end process
+
+
+end decoder_a ;
