@@ -63,7 +63,7 @@ case code_op is
 		end if;
 	--Instruction BGT add	
 	when "0111" =>
-		if flagEQ = '1' then
+		if flagGT = '1' then
 			tmp := "01000100010100";
 		else
 			tmp := "11000100010100";
