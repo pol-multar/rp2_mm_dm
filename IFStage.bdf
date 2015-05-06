@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect -256 224 -88 240)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Clock" (rect 5 0 34 12)(font "Arial" ))
+	(text "Clock" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect -256 240 -88 256)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Reset" (rect 5 0 35 12)(font "Arial" ))
+	(text "Reset" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,26 +53,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 1648 -72 1850 -56)
+	(rect 1648 96 1836 112)
 	(text "INPUT" (rect 15 0 43 10)(font "Arial" (font_size 6)))
-	(text "sel_addr_mux" (rect 128 0 196 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 84 12)(pt 59 12))
-		(line (pt 84 4)(pt 59 4))
-		(line (pt 55 8)(pt 0 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 59 4)(pt 55 8))
-		(line (pt 59 12)(pt 55 8))
-	)
-	(flipy)
-	(text "VCC" (rect 20 7 40 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
-	(rect 1656 0 1834 16)
-	(text "INPUT" (rect 15 0 43 10)(font "Arial" (font_size 6)))
-	(text "incr_decr" (rect 128 0 172 12)(font "Arial" ))
+	(text "sel_addr_mux" (rect 114 0 182 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 84 12)(pt 59 12))
@@ -351,105 +334,20 @@ applicable agreement for further details.
 	)
 	(annotation_block (parameter)(rect 1224 152 1408 184))
 )
-(connector
-	(pt 496 32)
-	(pt 552 32)
-	(bus)
-)
-(connector
-	(pt 552 176)
-	(pt 552 32)
-	(bus)
-)
-(connector
-	(pt 48 176)
-	(pt 48 264)
-	(bus)
-)
-(connector
-	(pt 48 264)
-	(pt 112 264)
-	(bus)
-)
-(connector
-	(pt 656 88)
-	(pt 584 88)
-	(bus)
-)
-(connector
-	(pt 584 88)
-	(pt 584 232)
-	(bus)
-)
-(connector
-	(pt 584 232)
-	(pt 656 232)
-	(bus)
-)
-(connector
-	(text "instr[15..0]" (rect 881 216 934 228)(font "Arial" ))
-	(pt 832 232)
-	(pt 1008 232)
-	(bus)
-)
-(connector
-	(text "next_adr[7..0]" (rect 291 160 359 172)(font "Arial" ))
-	(pt 552 176)
-	(pt 48 176)
-	(bus)
-)
-(connector
-	(pt 112 248)
-	(pt -88 248)
-)
-(connector
-	(pt 1008 216)
-	(pt 976 216)
-)
-(connector
-	(pt 976 216)
-	(pt 976 328)
-)
-(connector
-	(pt -48 328)
-	(pt 976 328)
-)
-(connector
-	(pt -48 232)
-	(pt -48 328)
-)
-(connector
-	(pt -88 232)
-	(pt -48 232)
-)
-(connector
-	(pt -48 232)
-	(pt 112 232)
-)
-(connector
-	(pt 1008 72)
-	(pt 1040 72)
-	(bus)
-)
-(connector
-	(pt 1040 -40)
-	(pt 1040 72)
-	(bus)
-)
-(connector
-	(pt 1040 -40)
-	(pt -16 -40)
-	(bus)
-)
-(connector
-	(pt -16 -40)
-	(pt -16 48)
-	(bus)
-)
-(connector
-	(pt -16 48)
-	(pt 104 48)
-	(bus)
+(symbol
+	(rect 600 56 632 72)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst5" (rect 3 5 26 17)(font "Arial" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
 )
 (connector
 	(text "instr_out[15..0]" (rect 1302 200 1376 212)(font "Arial" ))
@@ -466,26 +364,6 @@ applicable agreement for further details.
 (connector
 	(pt 656 72)
 	(pt 616 72)
-)
-(connector
-	(pt 616 72)
-	(pt 616 8)
-)
-(connector
-	(pt -88 64)
-	(pt 104 64)
-)
-(connector
-	(pt 1648 -64)
-	(pt -88 -64)
-)
-(connector
-	(pt -88 64)
-	(pt -88 -64)
-)
-(connector
-	(pt 616 8)
-	(pt 1656 8)
 )
 (connector
 	(text "instr_out[3..0]" (rect 1579 144 1647 156)(font "Arial" ))
@@ -518,26 +396,98 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1632 368)
-	(pt 416 368)
+	(text "next_adr[7..0]" (rect 32 280 100 292)(font "Arial" ))
+	(pt 48 264)
+	(pt 112 264)
 	(bus)
 )
 (connector
-	(pt 416 368)
-	(pt 416 232)
+	(text "next_adr[7..0]" (rect 526 8 594 20)(font "Arial" ))
+	(pt 496 32)
+	(pt 552 32)
 	(bus)
 )
 (connector
+	(text "adr_imem[7..0]" (rect 335 208 409 220)(font "Arial" ))
 	(pt 312 232)
-	(pt 416 232)
+	(pt 392 232)
 	(bus)
 )
 (connector
-	(text "adr_imem[7..0]" (rect 446 216 520 228)(font "Arial" ))
-	(pt 416 232)
-	(pt 584 232)
+	(text "adr_imem[7..0]" (rect 525 176 599 188)(font "Arial" ))
+	(pt 656 232)
+	(pt 552 232)
 	(bus)
 )
-(junction (pt 584 232))
-(junction (pt -48 232))
-(junction (pt 416 232))
+(connector
+	(text "instr[15..0]" (rect 846 200 899 212)(font "Arial" ))
+	(pt 832 232)
+	(pt 864 232)
+	(bus)
+)
+(connector
+	(text "instr[15..0]" (rect 965 240 1018 252)(font "Arial" ))
+	(pt 1008 232)
+	(pt 968 232)
+	(bus)
+)
+(connector
+	(text "adr_imemplus[7..0]" (rect 41 32 135 44)(font "Arial" ))
+	(pt 104 48)
+	(pt 16 48)
+	(bus)
+)
+(connector
+	(text "adr_imem[7..0]" (rect 1556 344 1630 356)(font "Arial" ))
+	(pt 1544 368)
+	(pt 1632 368)
+	(bus)
+)
+(connector
+	(text "clk_ifs" (rect -80 216 -47 228)(font "Arial" ))
+	(pt -88 232)
+	(pt -48 232)
+)
+(connector
+	(text "en_ifs" (rect -76 232 -46 244)(font "Arial" ))
+	(pt -88 248)
+	(pt -48 248)
+)
+(connector
+	(text "clk_ifs" (rect 72 216 105 228)(font "Arial" ))
+	(pt 112 232)
+	(pt 56 232)
+)
+(connector
+	(text "en_ifs" (rect 71 232 101 244)(font "Arial" ))
+	(pt 112 248)
+	(pt 56 248)
+)
+(connector
+	(text "clk_ifs" (rect 979 200 1012 212)(font "Arial" ))
+	(pt 1008 216)
+	(pt 960 216)
+)
+(connector
+	(text "sel_v" (rect 53 48 80 60)(font "Arial" ))
+	(pt 16 64)
+	(pt 104 64)
+)
+(connector
+	(text "adr_imemplus[7..0]" (rect 1045 56 1139 68)(font "Arial" ))
+	(pt 1008 72)
+	(pt 1088 72)
+	(bus)
+)
+(connector
+	(text "adr_imem[7..0]" (rect 537 112 611 124)(font "Arial" ))
+	(pt 584 88)
+	(pt 656 88)
+	(bus)
+)
+(connector
+	(text "sel_v" (rect 1580 88 1607 100)(font "Arial" ))
+	(pt 1648 104)
+	(pt 1568 104)
+)
+(text "Mettre a 1 pour lire en mem" (rect 1696 72 1849 86)(font "Arial" (font_size 8)))
