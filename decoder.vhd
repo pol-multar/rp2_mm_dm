@@ -43,77 +43,56 @@ case code_op is
 	when "0001" =>
 		tmp := "10010110010110";
 	--Instruction NOT	
-	if	code_op = "0010" then
+	when "0010" =>
 		tmp := "10100110010110";
-	end if;
 	--Instruction MULT	
-	if	code_op = "0011" then
-		tmp := "10110110010110";
-	end if;		
+	when "0011" =>
+		tmp := "10110110010110";		
 	--Instruction NC	
-	if	code_op = "0100" then
+	when "0100" =>
 		tmp := "00000000000000";
-	end if;
 	--Instruction JMP	
-	if	code_op = "0101" then
+	when "0101" =>
 		tmp := "01000100010110";
-	end if;
 	--Instruction BEQ add	
-	if	code_op = "0110" then
-	
-		if flagEQ = '0' then
-			tmp := "01000100010100";
-		end if;
-		
+	when "0110" =>
 		if flagEQ = '1' then
+			tmp := "01000100010100";
+		else
 			tmp := "11000100010100";
 		end if;
-		
-	end if;
 	--Instruction BGT add	
-	if	code_op = "0111" then
-	
-		if flagEQ = '0' then
-			tmp := "01000100010100";
-		end if;
-		
+	when "0111" =>
 		if flagEQ = '1' then
+			tmp := "01000100010100";
+		else
 			tmp := "11000100010100";
 		end if;
-		
-	end if;
 	--Instruction LD	
-	if	code_op = "1000" then
+	when "1000" =>
 		tmp := "11000111000110";
-	end if;
 	--Instruction MOVI	
-	if	code_op = "1001" then
+	when "1001" =>
 		tmp := "11000111010110";
-	end if;
 	--Instruction ST	
-	if	code_op = "1010" then
+	when "1010" =>
 		tmp := "11000000110110";
-	end if;
 	--Instruction B: NOP	
-	if	code_op = "1011" then
+	when "1011" =>
 		tmp := "11000101010110";
-	end if;
 	--Instruction C:MOV	
-	if	code_op = "1100" then
+	when "1100" =>
 		tmp := "11000110110110";
-	end if;
 	--Instruction D:OUT	
-	if	code_op = "1101" then
-		tmp := "11001100110110";
-	end if;	
+	when "1101" =>
+		tmp := "11001100110110";	
 	--Instruction E:SHF	
-	if	code_op = "1110" then
+	when "1110" =>
 		tmp := "11010110010110";
-	end if;	
 	--Instruction 15:IN	
-	if	code_op = "1111" then
+	when "1111" =>
 		tmp := "11000110111111";
-	end if;
+end case;
 
 	sel_adr_mux <= tmp(13);
 	code_alu <= tmp(12 downto 10);
