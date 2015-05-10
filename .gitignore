@@ -3,6 +3,7 @@
 !/rapport
 /rapport/*.tcp
 /rapport/*.tps
+!/captures
 !*.vhd
 !*.vhdl
 !.gitignore

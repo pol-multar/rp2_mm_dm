@@ -118,15 +118,44 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ==> Some hints are following:
 
-\chapter{Some small hints}\label{hints}
+\chapter{Instruction Fetch Stage}\label{instruction}
 
-\section{German Umlauts and other Language Specific Characters}\label{umlauts}
-You can type german umlauts like 'ä', 'ö', or 'ü' directly in this file.
-This is also true for other language specific characters like 'é', 'è' etc.
+\section{Program Counter}\label{pc}
 
-There are problems with automatic hyphenation when using language
-specific characters and OT1-encoded fonts. In this case, use a
-T1-encoded Type1-font like the Latin Modern font family (\verb#\usepackage{lmodern}#).
+\begin{itemize}
+	\item {Fonction :}
+	Le registre \textbf{PC} (Programme Counter) contient l'adresse de la prochaine instruction à exécuter. Il doit pouvoir être initialisé à la valeur de l'adresse correspondant à la première instruction à executer. Cette valeur (adresse 0 de la mémoire d’instruction) est chargée dans le registre \textbf{PC} lorsque le signal d’entrée reset est égal à 0. 
+	\item{Ressources d'entrée :}
+	Le registre \textbf{PC} possède trois entrée :
+	\begin{itemize}
+		\item [clk] un std_logic relié à l' horloge du processeur.
+		\item [reset] un std_logic qui lorsqu'il reçoit un signal charge la valeur 0 dans le registre.
+		\item [adr_in] un std_logic_vector qui va recevoir l'adresse de la prochaine instruction. 
+	\end{itemize}
+	\item{Ressources de sortie :}
+	Le registre \textbf{PC} possède une sortie :	
+	\begin{itemize}
+		\item [adr_out] un std_logic_vector qui va envoyer l'adresse de l'instruction à exécuter.
+	\end{itemize}
+	\item{Symbôle du bloc :}
+	
+	\begin{figure}
+		\centering
+			\includegraphics{../captures/pc_symb.PNG}
+		\label{fig:pc_symb}
+	\end{figure}
+	
+	\item{Simulation :}
+			\includegraphics{../captures/pc_simu.PNG}
+	
+\end{itemize}
+
+
+
+
+%There are problems with automatic hyphenation when using language
+%specific characters and OT1-encoded fonts. In this case, use a
+%T1-encoded Type1-font like the Latin Modern font family (\verb#\usepackage{lmodern}#).
 
 
 \section{References}\label{references}
