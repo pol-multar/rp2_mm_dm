@@ -1,8 +1,5 @@
 ## Core VHDL Project :
 /*
-!/rapport
-/rapport/*.tcp
-/rapport/*.tps
 !/captures
 !*.vhd
 !*.vhdl
