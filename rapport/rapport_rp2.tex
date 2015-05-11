@@ -122,22 +122,23 @@
 
 \section{Program Counter}\label{pc}
 
-\begin{itemize}
+ \begin{itemize}
 	\item {Fonction :}
 	Le registre \textbf{PC} (Programme Counter) contient l'adresse de la prochaine instruction à exécuter. Il doit pouvoir être initialisé à la valeur de l'adresse correspondant à la première instruction à executer. Cette valeur (adresse 0 de la mémoire d’instruction) est chargée dans le registre \textbf{PC} lorsque le signal d’entrée reset est égal à 0. 
 	\item{Ressources d'entrée :}
 	Le registre \textbf{PC} possède trois entrée :
 	\begin{itemize}
-		\item [clk] un std_logic relié à l' horloge du processeur.
-		\item [reset] un std_logic qui lorsqu'il reçoit un signal charge la valeur 0 dans le registre.
-		\item [adr_in] un std_logic_vector qui va recevoir l'adresse de la prochaine instruction. 
+		\item [clk] un std\_logic relié à l' horloge du processeur.
+		\item [reset] un std\_logic qui lorsqu'il reçoit un signal charge la valeur 0 dans le registre.
+		\item [adr\_in] un std\_logic\_vector qui va recevoir l'adresse de la prochaine instruction. 
 	\end{itemize}
 	\item{Ressources de sortie :}
 	Le registre \textbf{PC} possède une sortie :	
 	\begin{itemize}
-		\item [adr_out] un std_logic_vector qui va envoyer l'adresse de l'instruction à exécuter.
+		\item [adr\_out] un std\_logic\_vector qui va envoyer l'adresse de l'instruction à exécuter.
 	\end{itemize}
 	\item{Symbôle du bloc :}
+\end{itemize}
 	
 	\begin{figure}
 		\centering
