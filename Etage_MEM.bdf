@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 24 32 192 48)
+	(rect -48 216 120 232)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
 	(text "rd_ex[3..0]" (rect 5 0 66 10)(font "Arial" ))
 	(pt 168 8)
@@ -37,7 +37,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 0 64 176 80)
+	(rect -48 168 128 184)
 	(text "INPUT" (rect 133 0 162 9)(font "Arial" (font_size 6)))
 	(text "en_reg_file_ex" (rect 5 0 87 10)(font "Arial" ))
 	(pt 176 8)
@@ -53,7 +53,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 760 416 960 432)
+	(rect -48 192 152 208)
 	(text "INPUT" (rect 157 0 186 9)(font "Arial" (font_size 6)))
 	(text "sel_mem_mux_ex" (rect 5 0 105 10)(font "Arial" ))
 	(pt 200 8)
@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 0 152 168 168)
+	(rect -48 144 120 160)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
 	(text "r_w_ex" (rect 5 0 43 10)(font "Arial" ))
 	(pt 168 8)
@@ -85,7 +85,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 8 184 176 200)
+	(rect -48 264 120 280)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
 	(text "adr_ex[7..0]" (rect 5 0 73 10)(font "Arial" ))
 	(pt 168 8)
@@ -101,7 +101,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 0 224 176 240)
+	(rect -48 240 128 256)
 	(text "INPUT" (rect 133 0 162 9)(font "Arial" (font_size 6)))
 	(text "data_ex[15..0]" (rect 5 0 87 10)(font "Arial" ))
 	(pt 176 8)
@@ -117,7 +117,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 8 256 176 272)
+	(rect -48 288 120 304)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
 	(text "clk" (rect 5 0 22 10)(font "Arial" ))
 	(pt 168 8)
@@ -149,7 +149,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1880 136 2059 152)
+	(rect 1888 136 2067 152)
 	(text "OUTPUT" (rect 1 0 41 9)(font "Arial" (font_size 6)))
 	(text "en_reg_file_wb" (rect 90 0 173 10)(font "Arial" ))
 	(pt 0 8)
@@ -357,22 +357,6 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 1384 232 1613 258))
 )
 (connector
-	(pt 168 160)
-	(pt 240 160)
-)
-(connector
-	(pt 240 160)
-	(pt 240 152)
-)
-(connector
-	(pt 240 152)
-	(pt 248 152)
-)
-(connector
-	(pt 176 264)
-	(pt 200 264)
-)
-(connector
 	(pt 200 136)
 	(pt 248 136)
 )
@@ -389,58 +373,13 @@ applicable agreement for further details.
 	(pt 640 312)
 )
 (connector
-	(pt 176 192)
-	(pt 616 192)
-	(bus)
-)
-(connector
-	(pt 616 192)
-	(pt 616 296)
-	(bus)
-)
-(connector
 	(pt 616 296)
 	(pt 640 296)
 	(bus)
 )
 (connector
-	(pt 176 232)
-	(pt 480 232)
-	(bus)
-)
-(connector
-	(pt 480 232)
-	(pt 480 328)
-	(bus)
-)
-(connector
 	(pt 848 296)
 	(pt 992 296)
-	(bus)
-)
-(connector
-	(pt 592 328)
-	(pt 592 400)
-	(bus)
-)
-(connector
-	(pt 592 400)
-	(pt 912 400)
-	(bus)
-)
-(connector
-	(pt 480 328)
-	(pt 592 328)
-	(bus)
-)
-(connector
-	(pt 592 328)
-	(pt 640 328)
-	(bus)
-)
-(connector
-	(pt 912 400)
-	(pt 912 312)
 	(bus)
 )
 (connector
@@ -462,14 +401,6 @@ applicable agreement for further details.
 	(pt 1440 96)
 )
 (connector
-	(pt 200 96)
-	(pt 200 136)
-)
-(connector
-	(pt 200 136)
-	(pt 200 264)
-)
-(connector
 	(pt 1440 280)
 	(pt 1496 280)
 )
@@ -484,17 +415,6 @@ applicable agreement for further details.
 (connector
 	(pt 1440 136)
 	(pt 1440 280)
-)
-(connector
-	(text "ctrl_in[3..0]" (rect 192 32 259 42)(font "Arial" ))
-	(pt 192 40)
-	(pt 224 40)
-	(bus)
-)
-(connector
-	(text "ctrl_in[4]" (rect 186 64 239 74)(font "Arial" ))
-	(pt 176 72)
-	(pt 224 72)
 )
 (connector
 	(text "ctrl_in[4..0]" (rect 1402 144 1469 154)(font "Arial" ))
@@ -520,17 +440,97 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "ctrl_out[4]" (rect 1840 136 1901 146)(font "Arial" ))
-	(pt 1880 144)
-	(pt 1840 144)
+	(text "ctrl_out[4]" (rect 1848 136 1909 146)(font "Arial" ))
+	(pt 1848 144)
+	(pt 1888 144)
 )
 (connector
-	(pt 968 424)
-	(pt 960 424)
+	(pt 592 328)
+	(pt 592 376)
+	(bus)
+)
+(connector
+	(pt 592 376)
+	(pt 912 376)
+	(bus)
+)
+(connector
+	(pt 912 312)
+	(pt 912 376)
+	(bus)
+)
+(connector
+	(pt 480 328)
+	(pt 592 328)
+	(bus)
+)
+(connector
+	(pt 592 328)
+	(pt 640 328)
+	(bus)
 )
 (connector
 	(pt 968 328)
-	(pt 968 424)
+	(pt 968 384)
+)
+(connector
+	(pt 192 384)
+	(pt 968 384)
+)
+(connector
+	(text "ctrl_in[4]" (rect 138 168 191 178)(font "Arial" ))
+	(pt 128 176)
+	(pt 176 176)
+)
+(connector
+	(pt 192 200)
+	(pt 152 200)
+)
+(connector
+	(pt 192 384)
+	(pt 192 200)
+)
+(connector
+	(pt 120 152)
+	(pt 248 152)
+)
+(connector
+	(text "ctrl_in[3..0]" (rect 120 216 187 226)(font "Arial" ))
+	(pt 120 224)
+	(pt 152 224)
+	(bus)
+)
+(connector
+	(pt 480 248)
+	(pt 128 248)
+	(bus)
+)
+(connector
+	(pt 480 328)
+	(pt 480 248)
+	(bus)
+)
+(connector
+	(pt 616 296)
+	(pt 616 272)
+	(bus)
+)
+(connector
+	(pt 120 272)
+	(pt 616 272)
+	(bus)
+)
+(connector
+	(pt 200 296)
+	(pt 120 296)
+)
+(connector
+	(pt 200 96)
+	(pt 200 136)
+)
+(connector
+	(pt 200 136)
+	(pt 200 296)
 )
 (junction (pt 592 328))
 (junction (pt 200 136))
